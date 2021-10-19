@@ -17,22 +17,22 @@
             <img src="/rock-paper-scissor/images/3.png" alt="">
         </div>
         <div class="fight">
-            <h3>{{botScore}}</h3>
             <div class="score">
                 <div>
                     <img v-bind:src="'/rock-paper-scissor/images/' + humanChoice + '.png'" alt="">
                     <p>YOU</p>
                 </div>
-                <div>
-                    <button @click="compare()">PLAY</button>
-                    <button @click="reset()">RESET</button>
-                </div>
+                <h3>{{botScore}}</h3>
+                <h3>{{humanScore}}</h3>
                 <div>
                     <img v-bind:src="'/rock-paper-scissor/images/' + botChoice + '.png'" alt="">
                     <p>BOT</p>
                 </div>
             </div>
-            <h3>{{humanScore}}</h3>
+            <div>
+                <button @click="compare()">PLAY</button>
+                <button @click="reset()">RESET</button>
+            </div>
         </div>
         <div class="choice">
             <div class="choice-select">
