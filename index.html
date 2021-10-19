@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="/rock-paper-scissor/style.css">
+    <title>Rock - Paper - Scissor Game</title>
+</head>
+<body>
+    <div id="app">
+        <h2>YOU</h2>
+        <p class="start-game">SELECT ONE BELOW!</p>
+        <div class="choice">
+            <div class="choice-select">
+                <input type="radio" v-model="humanChoice" value="1" name="selection" id="rock">
+                <label for="rock"><img src="/rock-paper-scissor/images/1.png" alt=""></label>
+            </div>
+            <div class="choice-select">
+                <input type="radio" v-model="humanChoice" value="2" name="selection" id="paper">
+                <label for="paper"><img src="/rock-paper-scissor/images/2.png" alt=""></label>
+            </div>
+            <div class="choice-select">
+                <input type="radio" v-model="humanChoice" value="3" name="selection" id="scissor">
+                <label for="scissor"><img src="/rock-paper-scissor/images/3.png" alt=""></label>
+            </div>
+        </div>
+        <div class="fight">
+            <h3>{{humanScore}}</h3>
+            <div class="score">
+                <img v-bind:src="'/rock-paper-scissor/images/' + humanChoice + '.png'" alt="">
+                <div>
+                    <button @click="compare()">PLAY</button>
+                    <button @click="reset()">RESET</button>
+                </div>
+                <img v-bind:src="'/rock-paper-scissor/images/' + botChoice + '.png'" alt="">
+            </div>
+            <h3>{{botScore}}</h3>
+        </div>
+        <div class="botChoice">
+            <img src="/rock-paper-scissor/images/1.png" alt="">
+            <img src="/rock-paper-scissor/images/2.png" alt="">
+            <img src="/rock-paper-scissor/images/3.png" alt="">
+        </div>
+        <h2>BOT</h2>
+    </div>
+    <script src="/rock-paper-scissor/main.js"></script>
+</body>
+</html>

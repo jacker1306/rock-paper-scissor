@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #3B82F6;
+    margin: 20px;
+}
+
+h3 {
+    color: green;
+    font-size: 32px;
+    margin: 30px;
+}
+
+#app {
+    text-align: center;
+}
+.choice {
+    display: flex;
+    justify-content: center;
+}
+
+.start-game {
+    color: red;
+    margin-top: 20px;
+}
+
+.choice-select {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    /* margin: 10px; */
+}
+
+img {
+    width: 66px;
+    height: 126px;
+    border: 1px solid rgb(218, 215, 215);
+    border-radius: 5px;
+    box-shadow: right #222;
+    margin: 10px;
+}
+
+.fight {
+    border: 1px solid #777;
+    border-radius: 10px;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 10px 20px;
+    padding: 5px 10px;
+    color: rgb(252, 252, 252);
+    background-color: #3B82F6;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #3B82F6;
+    background-color: rgb(252, 252, 252);
+}
+
+@media screen and (max-width: 768px) {
+    button {
+        margin: 5px;
+    }
+    img {
+        margin: 5px;
+    }
+    .fight {
+        margin: 20px 10px;
+    }
+    h3 {
+        margin: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .fight {
+        margin: 40px 90px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .fight {
+        margin: 40px 200px;
+    }
+}
+
+@media screen and (min-width: 1601px) {
+    .fight {
+        margin: 40px 500px;
+    }
+}
