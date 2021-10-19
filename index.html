@@ -10,8 +10,24 @@
 </head>
 <body>
     <div id="app">
-        <h2>YOU</h2>
-        <p class="start-game">SELECT ONE BELOW!</p>
+        <h2>BOT</h2>
+        <div class="botChoice">
+            <img src="/rock-paper-scissor/images/1.png" alt="">
+            <img src="/rock-paper-scissor/images/2.png" alt="">
+            <img src="/rock-paper-scissor/images/3.png" alt="">
+        </div>
+        <div class="fight">
+            <h3>{{botScore}}</h3>
+            <div class="score">
+                <img v-bind:src="'/rock-paper-scissor/images/' + humanChoice + '.png'" alt="">
+                <div>
+                    <button @click="compare()">PLAY</button>
+                    <button @click="reset()">RESET</button>
+                </div>
+                <img v-bind:src="'/rock-paper-scissor/images/' + botChoice + '.png'" alt="">
+            </div>
+            <h3>{{humanScore}}</h3>
+        </div>
         <div class="choice">
             <div class="choice-select">
                 <input type="radio" v-model="humanChoice" value="1" name="selection" id="rock">
@@ -26,24 +42,8 @@
                 <label for="scissor"><img src="/rock-paper-scissor/images/3.png" alt=""></label>
             </div>
         </div>
-        <div class="fight">
-            <h3>{{humanScore}}</h3>
-            <div class="score">
-                <img v-bind:src="'/rock-paper-scissor/images/' + humanChoice + '.png'" alt="">
-                <div>
-                    <button @click="compare()">PLAY</button>
-                    <button @click="reset()">RESET</button>
-                </div>
-                <img v-bind:src="'/rock-paper-scissor/images/' + botChoice + '.png'" alt="">
-            </div>
-            <h3>{{botScore}}</h3>
-        </div>
-        <div class="botChoice">
-            <img src="/rock-paper-scissor/images/1.png" alt="">
-            <img src="/rock-paper-scissor/images/2.png" alt="">
-            <img src="/rock-paper-scissor/images/3.png" alt="">
-        </div>
-        <h2>BOT</h2>
+        <p class="start-game">SELECT ONE ABOVE THEN HIT PLAY TO FIGHT BOT!</p>
+        <h2>YOU</h2>
     </div>
     <script src="/rock-paper-scissor/main.js"></script>
 </body>
