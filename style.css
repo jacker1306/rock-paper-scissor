@@ -18,6 +18,16 @@ h3 {
 #app {
     text-align: center;
 }
+
+.bot-choice {
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    0% {transform: rotateY(0deg);}
+    100% {transform: rotateY(360deg);}
+}
+
 .choice {
     display: flex;
     justify-content: center;
@@ -33,7 +43,6 @@ h3 {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    /* margin: 10px; */
 }
 
 img {
