@@ -19,7 +19,7 @@ var app = new Vue ({
             } else if (this.botChoice < this.humanChoice) {
                 this.humanScore+=1;
             } else if ((this.botChoice === this.humanChoice)) {
-                this.humanScore = this.humanScore;
+                this.humanScore +=0;
             }
         },
         reset() {
