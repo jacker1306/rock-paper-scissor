@@ -48,12 +48,14 @@ img {
 .fight {
     border: 1px solid #777;
     border-radius: 10px;
+    padding: 20px 0;
 }
 
 .score {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 0;
 }
 
 button {
